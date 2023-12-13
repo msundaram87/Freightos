@@ -1,0 +1,137 @@
+p {
+  margin: 0;
+}
+
+#root {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Header, .footer {
+  background-color: rgb(39, 43, 51);
+  margin-bottom: 1em;
+  padding: 1em;
+  max-width: 1440px;
+  width: 100%;
+
+  h1, h4 {
+    margin: 0;
+    text-align: center;
+    color: #FFF;
+  }
+}
+
+.container {
+  background-color: rgb(39, 43, 51);
+  padding: 1em;
+  max-width: 1440px;
+  width: 100%;
+  margin: 1em auto;
+
+  button {
+    margin: 1em 0;
+  }
+
+  .container__sorting {
+    position: relative;
+  }
+
+  .container_sortList {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    gap: 0;
+    left: 0;
+    top: 4em;
+    border-radius: 8px;
+    z-index: 999;
+    width: max-content;
+
+    li {
+      background-color: white;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+
+      &:first-child {
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      &:hover {
+        background-color: rgb(39, 43, 51);
+        color: #FFF;
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    li {
+      background-color: rgb(60, 62, 68);
+      padding: 16px;
+      max-width: 320px;
+      max-height: 420px;
+      height: 100%;
+      width: 100%;
+
+      p {
+        color: #FFF;
+      }
+
+      .card__details .card__details--name {
+        font-size: 20px;
+        color: orange;
+        font-weight: 600;
+      }
+
+      .Alive {
+        color: green;
+      }
+
+      .Dead {
+        color: red;
+      }
+
+      .card__details .card__details--lastknown,
+      .card__details .card__details--origin {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          color: lightblue;
+
+          &:first-child {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  span {
+    color: #fff;
+  }
+}
